@@ -40,6 +40,22 @@ export default {
 };
 </script>
 
-<style scoped>
-/**/
+<style lang="scss" scoped>
+#input-component {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+
+  #label {
+    margin-bottom: 0.5rem;
+    font-family: $font-family-heading;
+  }
+
+  #input {
+    border: 1px solid $color-primary-dark;
+    background: $color-primary-light;
+    padding: 0.5rem;
+  }
+}
 </style>
