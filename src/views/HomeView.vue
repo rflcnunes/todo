@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <TheForm />
+    <TheList />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import TheList from "@/components/organisms/TheList.vue";
+import TheForm from "@/components/molecules/TheForm.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    TheForm,
+    TheList,
   },
 };
 </script>
+
+<style scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  border: 1px solid red;
+}
+</style>

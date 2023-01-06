@@ -1,0 +1,97 @@
+// THEMES
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+/*
+    * 1. The default theme is the one that is used when no theme is specified.
+    * 2. The dark theme is used when the user has specified a dark theme.
+    * 3. The light theme is used when the user has specified a light theme.
+*/
+
+/*
+    DEFAULT THEME (LIGHT)
+*/
+$color-primary-light: #ffffff;
+$color-secondary-light: #e2e8f0;
+$color-tertiary-light: #cbd5e0;
+
+/* BORDER */
+$border-light-color: #e2e8f0;
+
+/* SHADOWS */
+$light-shadow-light: 0 0 0 1px rgba(0, 0, 0, 0.05);
+$light-shadow-medium: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$light-shadow-dark: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+/*
+    DARK THEME
+*/
+$color-primary-dark: #1a202c;
+$color-secondary-dark: #2d3748;
+$color-tertiary-dark: #4a5568;
+
+/*
+    COLORS THEME
+*/
+$color-blue: #0478F4;
+$color-purple: #A350A3;
+$color-pink: #F74E9E;
+$color-red: #FF4F56;
+$color-orange: #F7821B;
+$color-yellow: #FFB526;
+$color-green: #65BA44;
+$color-gray: #8C8C8C;
+
+/* BORDER */
+$border-dark-color: #2d3748;
+
+/* SHADOWS */
+$dark-shadow-light: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+$dark-shadow-medium: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+$dark-shadow-heavy: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+/*
+    FONT SIZE
+*/
+$font-size-small: 0.875rem;
+$font-size-base: 1rem;
+$font-size-large: 1.25rem;
+$font-size-xlarge: 1.5rem;
+
+/* Font weights */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 900;
+
+/* Line heights */
+$line-height-small: 1.25;
+$line-height-base: 1.5;
+$line-height-large: 1.75;
+$line-height-xlarge: 2;
+
+/* Spacing */
+$spacing-xxsmall: 0.25rem;
+$spacing-xsmall: 0.5rem;
+$spacing-small: 0.75rem;
+$spacing-base: 1rem;
+
+/* Media queries */
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1280px;
+
+/* Border radius */
+$border-radius-small: 0.25rem;
+$border-radius-base: 0.5rem;
+$border-radius-large: 0.75rem;
+
+/* Border width */
+$border-width-small: 1px;
+$border-width-base: 2px;
+$border-width-large: 3px;
+
+/* Font Family */
+$font-family-default: 'Ubuntu', sans-serif;
+$font-family-heading: 'Prompt', sans-serif;

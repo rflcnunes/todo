@@ -1,0 +1,15 @@
+// Mixins
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin positionCenter {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
