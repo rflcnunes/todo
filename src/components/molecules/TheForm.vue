@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheTypography content="Test" tag="h2" />
+    <TheTypography content="Taskly" tag="h1" />
     <TheInput
       :label="label"
       :placeholder="placeholder"
@@ -8,13 +8,6 @@
     />
     {{ task }}
     <TheButton label="Save" @data="saveTask" />
-    <div>
-      <ul>
-        <li v-for="task in tasks" :key="task.id">
-          {{ task.name }}
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
@@ -32,8 +25,8 @@ export default {
   },
   data() {
     return {
-      label: "Test",
-      placeholder: "Test Tester",
+      label: "Insert your task",
+      placeholder: "To buy coffee",
       task: "",
       saved: null,
       tasks: [],
