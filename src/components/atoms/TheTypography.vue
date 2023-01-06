@@ -25,6 +25,13 @@ export default {
 };
 </script>
 
-<style scoped>
-/**/
+<style lang="scss" scoped>
+h1 {
+  font-family: $font-family-heading;
+}
+
+span {
+  color: $color-primary-dark;
+  font-family: $font-family-subtitle;
+}
 </style>
