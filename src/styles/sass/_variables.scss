@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*
     * 1. The default theme is the one that is used when no theme is specified.
@@ -95,3 +96,4 @@ $border-width-large: 3px;
 /* Font Family */
 $font-family-default: 'Ubuntu', sans-serif;
 $font-family-heading: 'Prompt', sans-serif;
+$font-family-subtitle: 'Roboto', sans-serif;
