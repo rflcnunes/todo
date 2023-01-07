@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 #the_form {
-  border: 1px solid red;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
