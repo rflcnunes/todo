@@ -21,9 +21,11 @@ Vue.component("TheForm", TheForm);
 // Organisms
 import TheList from "@/components/organisms/TheList.vue";
 import TheListFinished from "@/components/organisms/TheListFinished.vue";
+import TheListDeleted from "@/components/organisms/TheListDeleted.vue";
 
 Vue.component("TheList", TheList);
 Vue.component("TheListFinished", TheListFinished);
+Vue.component("TheListDeleted", TheListDeleted);
 
 Vue.config.productionTip = false;
 
