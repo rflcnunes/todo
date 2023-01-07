@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TheTypography content="Taskly" tag="h1" />
     <TheInput
       :label="label"
       :placeholder="placeholder"
@@ -12,17 +11,8 @@
 </template>
 
 <script>
-import TheInput from "@/components/atoms/TheInput.vue";
-import TheTypography from "@/components/atoms/TheTypography.vue";
-import TheButton from "@/components/atoms/TheButton.vue";
-
 export default {
   name: "TheForm",
-  components: {
-    TheButton,
-    TheTypography,
-    TheInput,
-  },
   data() {
     return {
       label: "Insert your task",
@@ -41,7 +31,12 @@ export default {
         (this.tasks = JSON.parse(localStorage.getItem("tasks")));
     },
     saveTask() {
-      this.tasks.push({ id: this.tasks.length, name: this.task });
+      this.tasks.push({
+        id: this.tasks.length,
+        name: this.task,
+        isFinished: false,
+        isDeleted: false,
+      });
       console.log("saveTask", this.task);
       localStorage.setItem("tasks", JSON.stringify(this.tasks));
     },
