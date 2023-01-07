@@ -3,7 +3,10 @@
     <TheTypography
       v-bind:content="item"
       tag="span"
-      v-bind:class="{ checked: checked }"
+      v-bind:class="{
+        checked: checked,
+        deleted: deleted,
+      }"
     />
   </div>
 </template>
@@ -20,12 +23,20 @@ export default {
       type: Boolean,
       required: true,
     },
+    deleted: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .checked {
-  text-decoration: line-through;
+  color: mediumseagreen;
+}
+
+.deleted {
+  color: red;
 }
 </style>
