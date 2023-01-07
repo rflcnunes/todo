@@ -18,6 +18,11 @@ import TheForm from "@/components/molecules/TheForm.vue";
 Vue.component("TheItem", TheItem);
 Vue.component("TheForm", TheForm);
 
+// Organisms
+import TheList from "@/components/organisms/TheList.vue";
+
+Vue.component("TheList", TheList);
+
 Vue.config.productionTip = false;
 
 new Vue({
