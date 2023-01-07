@@ -7,11 +7,13 @@ import TheButton from "@/components/atoms/TheButton.vue";
 import TheInput from "@/components/atoms/TheInput.vue";
 import TheTypography from "@/components/atoms/TheTypography.vue";
 import TheIcon from "@/components/atoms/TheIcon.vue";
+import TheIconButton from "@/components/atoms/TheIconButton.vue";
 
 Vue.component("TheButton", TheButton);
 Vue.component("TheInput", TheInput);
 Vue.component("TheTypography", TheTypography);
 Vue.component("TheIcon", TheIcon);
+Vue.component("TheIconButton", TheIconButton);
 
 // Molecules
 import TheItem from "@/components/molecules/TheItem.vue";

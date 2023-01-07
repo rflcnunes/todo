@@ -9,12 +9,8 @@
             v-bind:deleted="item.isDeleted"
           />
           <div id="actions">
-            <TheButton label="Check" @input="checkItem(item.id)" icon="done" />
-            <TheButton
-              label="Delete"
-              @input="deleteItem(item.id)"
-              icon="delete_outline"
-            />
+            <TheIconButton @input="checkItem(item.id)" icon="done" />
+            <TheIconButton @input="deleteItem(item.id)" icon="delete_outline" />
           </div>
         </div>
       </div>
@@ -97,7 +93,7 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 40%;
+      width: 25%;
       align-items: center;
     }
   }
