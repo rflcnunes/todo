@@ -6,6 +6,7 @@
       <TheTypography v-bind:content="getDay" tag="span" />
     </div>
     <TheList />
+    <TheListFinished v-on:finish="finishedItems = $event" />
   </div>
 </template>
 
@@ -13,6 +14,11 @@
 import moment from "moment";
 export default {
   name: "HomeView",
+  data() {
+    return {
+      finishedItems: [],
+    };
+  },
   computed: {
     getDay() {
       return moment().format("MMM Do YY");

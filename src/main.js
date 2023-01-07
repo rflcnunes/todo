@@ -20,8 +20,10 @@ Vue.component("TheForm", TheForm);
 
 // Organisms
 import TheList from "@/components/organisms/TheList.vue";
+import TheListFinished from "@/components/organisms/TheListFinished.vue";
 
 Vue.component("TheList", TheList);
+Vue.component("TheListFinished", TheListFinished);
 
 Vue.config.productionTip = false;
 

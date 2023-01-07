@@ -1,15 +1,17 @@
 <template>
   <div id="the_list">
     <div id="list">
-      <div v-for="item in items" v-bind:key="item.id" id="item">
-        <TheItem
-          v-bind:item="item.name"
-          v-bind:checked="item.isFinished"
-          v-bind:deleted="item.isDeleted"
-        />
-        <div id="actions">
-          <button v-on:click="checkItem(item.id)">Check</button>
-          <button v-on:click="deleteItem(item.id)">Delete</button>
+      <div v-for="item in items" v-bind:key="item.id" id="item_row">
+        <div id="item" v-if="!item.isFinished && !item.isDeleted">
+          <TheItem
+            v-bind:item="item.name"
+            v-bind:checked="item.isFinished"
+            v-bind:deleted="item.isDeleted"
+          />
+          <div id="actions">
+            <button v-on:click="checkItem(item.id)">Check</button>
+            <button v-on:click="deleteItem(item.id)">Delete</button>
+          </div>
         </div>
       </div>
     </div>
@@ -68,19 +70,23 @@ export default {
     width: 100%;
     height: 100%;
 
-    #item {
-      border-bottom: 1px solid $color-primary-dark;
-      width: 97%;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      padding: 0 5px 0 5px;
-      justify-content: space-between;
-    }
+    #item_row {
+      width: 100%;
 
-    #item:last-child {
-      border-bottom: none;
+      #item {
+        border-bottom: 1px solid $color-primary-dark;
+        width: 97%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 0 5px 0 5px;
+        justify-content: space-between;
+      }
+
+      #item:last-child {
+        border-bottom: none;
+      }
     }
   }
 }
