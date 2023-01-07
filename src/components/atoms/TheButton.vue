@@ -28,7 +28,20 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-  border: 1px solid $color-primary-dark;
-  background: $color-primary-light;
+  @include reset();
+  width: 200px;
+  height: 30px;
+  border-radius: $border-radius-large;
+  background: $color-secondary-dark;
+  color: $color-primary-light;
+
+  &:hover {
+    background: $color-tertiary-dark;
+  }
+
+  &:active {
+    background: $color-tertiary-light;
+    color: $color-primary-dark;
+  }
 }
 </style>
