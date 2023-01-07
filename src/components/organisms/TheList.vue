@@ -1,5 +1,5 @@
 <template>
-  <div id="the_list">
+  <div id="the_list" v-if="items.length > 0">
     <div id="list">
       <div v-for="item in items" v-bind:key="item.id" id="item_row">
         <div id="item" v-if="!item.isFinished && !item.isDeleted">
@@ -71,7 +71,7 @@ export default {
     height: 100%;
 
     #item_row {
-      width: 100%;
+      width: 97%;
 
       #item {
         border-bottom: 1px solid $color-primary-dark;

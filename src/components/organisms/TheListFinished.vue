@@ -1,5 +1,5 @@
 <template>
-  <div id="the_list_finished">
+  <div id="the_list_finished" v-if="items.length > 0">
     <div id="list">
       <div v-for="item in items" v-bind:key="item.id" id="item">
         <TheItem
