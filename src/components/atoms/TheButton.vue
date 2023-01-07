@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" @click="$emit('data', $event)" type="submit">
+  <button class="btn" @click="$emit('input', $event)" type="submit">
     <TheIcon v-bind:icon="icon" />
     {{ label }}
   </button>
@@ -24,20 +24,14 @@ export default {
       required: false,
     },
   },
-  methods: {
-    input() {
-      this.$emit("input");
-    },
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 .btn {
-  @include reset();
-  width: 200px;
+  width: 100%;
   height: 30px;
-  border-radius: $border-radius-large;
+  border-radius: $border-radius-base;
   background: $color-secondary-dark;
   color: $color-primary-light;
   display: flex;

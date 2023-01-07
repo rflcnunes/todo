@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div id="the_form">
     <TheInput
       :label="label"
       :placeholder="placeholder"
       @input="task = $event"
     />
     {{ task }}
-    <TheButton label="Save" @data="saveTask" />
+    <TheButton label="Save" @input="saveTask" />
   </div>
 </template>
 
@@ -44,6 +44,11 @@ export default {
 };
 </script>
 
-<style scoped>
-/**/
+<style lang="scss" scoped>
+#the_form {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>
