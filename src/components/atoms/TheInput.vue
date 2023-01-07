@@ -43,19 +43,37 @@ export default {
 <style lang="scss" scoped>
 #input-component {
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 1rem;
   align-items: flex-start;
 
   #label {
+    width: 100%;
     margin-bottom: 0.5rem;
     font-family: $font-family-heading;
   }
 
   #input {
     border: 1px solid $color-primary-dark;
+    border-radius: $border-radius-base;
     background: $color-primary-light;
     padding: 0.5rem;
+    width: 100%;
+
+    &:hover {
+      border: 1px solid $color-purple;
+      outline: 1px solid $color-purple;
+    }
+
+    &:focus {
+      border: 1px solid $color-blue;
+      outline: 1px solid $color-blue;
+    }
+
+    &::placeholder {
+      color: $color-gray;
+    }
   }
 }
 </style>
