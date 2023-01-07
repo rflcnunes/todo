@@ -1,5 +1,6 @@
 <template>
   <button class="btn" @click="$emit('data', $event)" type="submit">
+    <TheIcon v-bind:icon="icon" />
     {{ label }}
   </button>
 </template>
@@ -16,6 +17,11 @@ export default {
     label: {
       type: String,
       required: true,
+    },
+    icon: {
+      type: String,
+      default: "",
+      required: false,
     },
   },
   methods: {
@@ -34,6 +40,10 @@ export default {
   border-radius: $border-radius-large;
   background: $color-secondary-dark;
   color: $color-primary-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
   &:hover {
     background: $color-tertiary-dark;
