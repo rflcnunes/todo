@@ -2,8 +2,15 @@
   <div id="the_list">
     <div id="list">
       <div v-for="item in items" v-bind:key="item.id" id="item">
-        <TheItem v-bind:item="item.name" v-bind:checked="item.isFinished" />
-        <button v-on:click="checkItem(item.id)">Check</button>
+        <TheItem
+          v-bind:item="item.name"
+          v-bind:checked="item.isFinished"
+          v-bind:deleted="item.isDeleted"
+        />
+        <div id="actions">
+          <button v-on:click="checkItem(item.id)">Check</button>
+          <button v-on:click="deleteItem(item.id)">Delete</button>
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +36,15 @@ export default {
       this.items.forEach((item) => {
         if (item.id === id) {
           item.isFinished = !item.isFinished;
+        }
+      });
+      localStorage.setItem("tasks", JSON.stringify(this.items));
+      this.getItems();
+    },
+    deleteItem(id) {
+      this.items.forEach((item) => {
+        if (item.id === id) {
+          item.isDeleted = !item.isDeleted;
         }
       });
       localStorage.setItem("tasks", JSON.stringify(this.items));
