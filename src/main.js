@@ -6,10 +6,12 @@ import router from "./router";
 import TheButton from "@/components/atoms/TheButton.vue";
 import TheInput from "@/components/atoms/TheInput.vue";
 import TheTypography from "@/components/atoms/TheTypography.vue";
+import TheIcon from "@/components/atoms/TheIcon.vue";
 
 Vue.component("TheButton", TheButton);
 Vue.component("TheInput", TheInput);
 Vue.component("TheTypography", TheTypography);
+Vue.component("TheIcon", TheIcon);
 
 // Molecules
 import TheItem from "@/components/molecules/TheItem.vue";
