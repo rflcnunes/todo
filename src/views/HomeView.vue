@@ -1,32 +1,35 @@
 <template>
-  <div class="home">
+  <div id="home">
     <TheForm />
+    <div class="header">
+      <TheTypography content="Taskly" tag="h1" />
+      <TheTypography v-bind:content="getDay" tag="span" />
+    </div>
     <TheList />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import TheList from "@/components/organisms/TheList.vue";
-import TheForm from "@/components/molecules/TheForm.vue";
-
+import moment from "moment";
 export default {
   name: "HomeView",
-  components: {
-    TheForm,
-    TheList,
+  computed: {
+    getDay() {
+      return moment().format("MMM Do YY");
+    },
   },
 };
 </script>
 
-<style scoped>
-.home {
+<style lang="scss" scoped>
+#home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: space-evenly;
   text-align: center;
-  border: 1px solid red;
+  margin: 0 auto;
+  width: 90vw;
+  height: 90vh;
 }
 </style>
