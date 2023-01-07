@@ -9,10 +9,10 @@
             v-bind:deleted="item.isDeleted"
           />
           <div id="actions">
-            <TheButton label="Check" @data="checkItem(item.id)" icon="done" />
+            <TheButton label="Check" @input="checkItem(item.id)" icon="done" />
             <TheButton
               label="Delete"
-              @data="deleteItem(item.id)"
+              @input="deleteItem(item.id)"
               icon="delete_outline"
             />
           </div>
