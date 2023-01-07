@@ -9,8 +9,12 @@
             v-bind:deleted="item.isDeleted"
           />
           <div id="actions">
-            <button v-on:click="checkItem(item.id)">Check</button>
-            <button v-on:click="deleteItem(item.id)">Delete</button>
+            <TheButton label="Check" @data="checkItem(item.id)" icon="done" />
+            <TheButton
+              label="Delete"
+              @data="deleteItem(item.id)"
+              icon="delete_outline"
+            />
           </div>
         </div>
       </div>
@@ -87,6 +91,14 @@ export default {
       #item:last-child {
         border-bottom: none;
       }
+    }
+
+    #actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 40%;
+      align-items: center;
     }
   }
 }
