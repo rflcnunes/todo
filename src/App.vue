@@ -5,7 +5,13 @@
 </template>
 
 <style lang="scss">
-#app {
+* {
   @include reset();
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
 }
 </style>
