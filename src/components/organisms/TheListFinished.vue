@@ -9,6 +9,7 @@
         >
           <template v-slot:actions>
             <TheIconButton @input="unchecked(item.id)" icon="close" />
+            <TheIconButton @input="deleteItem(item.id)" icon="delete_outline" />
           </template>
         </TheItem>
       </div>
@@ -29,7 +30,7 @@ export default {
   },
   computed: {
     finishedItems() {
-      return this.items.filter((item) => item.isFinished);
+      return this.items.filter((item) => item.isFinished && !item.isDeleted);
     },
   },
   methods: {
@@ -43,6 +44,15 @@ export default {
       this.items.forEach((item) => {
         if (item.id === id) {
           item.isFinished = false;
+        }
+      });
+      localStorage.setItem("tasks", JSON.stringify(this.items));
+      this.getItems();
+    },
+    deleteItem(id) {
+      this.items.forEach((item) => {
+        if (item.id === id) {
+          item.isDeleted = !item.isDeleted;
         }
       });
       localStorage.setItem("tasks", JSON.stringify(this.items));
