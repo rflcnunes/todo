@@ -1,12 +1,16 @@
 <template>
   <div id="the_list_finished" v-if="items.length > 0">
     <div id="list">
-      <div v-for="item in items" v-bind:key="item.id" id="item">
+      <div v-for="item in finishedItems" v-bind:key="item.id" id="item">
         <TheItem
           v-bind:item="item.name"
           v-bind:checked="item.isFinished"
           v-bind:deleted="item.isDeleted"
-        />
+        >
+          <template v-slot:actions>
+            <TheIconButton @input="unchecked(item.id)" icon="close" />
+          </template>
+        </TheItem>
       </div>
     </div>
   </div>
@@ -23,16 +27,26 @@ export default {
   created() {
     this.getItems();
   },
+  computed: {
+    finishedItems() {
+      return this.items.filter((item) => item.isFinished);
+    },
+  },
   methods: {
     getItems() {
-      const tasks = localStorage.getItem("tasks");
-      JSON.parse(tasks).forEach((item) => {
-        if (item.isFinished && !item.isDeleted) {
-          this.items.push(item);
-        }
-      });
+      localStorage.getItem("tasks");
+      this.items = JSON.parse(localStorage.getItem("tasks"));
 
       this.$emit("finish", this.items);
+    },
+    unchecked(id) {
+      this.items.forEach((item) => {
+        if (item.id === id) {
+          item.isFinished = false;
+        }
+      });
+      localStorage.setItem("tasks", JSON.stringify(this.items));
+      this.getItems();
     },
   },
 };

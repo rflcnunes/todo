@@ -8,6 +8,9 @@
         deleted: deleted,
       }"
     />
+    <div id="actions">
+      <slot name="actions" />
+    </div>
   </div>
 </template>
 
@@ -32,11 +35,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.checked {
-  color: mediumseagreen;
-}
+#the_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 
-.deleted {
-  color: red;
+  .checked {
+    color: mediumseagreen;
+  }
+
+  .deleted {
+    color: red;
+  }
+
+  #actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+  }
 }
 </style>

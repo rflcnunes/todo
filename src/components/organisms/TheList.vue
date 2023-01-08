@@ -7,11 +7,15 @@
             v-bind:item="item.name"
             v-bind:checked="item.isFinished"
             v-bind:deleted="item.isDeleted"
-          />
-          <div id="actions">
-            <TheIconButton @input="checkItem(item.id)" icon="done" />
-            <TheIconButton @input="deleteItem(item.id)" icon="delete_outline" />
-          </div>
+          >
+            <template v-slot:actions>
+              <TheIconButton @input="checkItem(item.id)" icon="done" />
+              <TheIconButton
+                @input="deleteItem(item.id)"
+                icon="delete_outline"
+              />
+            </template>
+          </TheItem>
         </div>
       </div>
     </div>
@@ -87,14 +91,6 @@ export default {
       #item:last-child {
         border-bottom: none;
       }
-    }
-
-    #actions {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 25%;
-      align-items: center;
     }
   }
 }
