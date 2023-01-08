@@ -7,7 +7,6 @@
     </div>
     <TheList />
     <TheListFinished v-on:finish="finishedItems = $event" />
-    <TheListDeleted v-on:delete="deletedItems = $event" />
   </div>
 </template>
 
@@ -18,7 +17,6 @@ export default {
   data() {
     return {
       finishedItems: [],
-      deletedItems: [],
     };
   },
   computed: {
