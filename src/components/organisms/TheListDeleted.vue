@@ -42,7 +42,6 @@ export default {
 #the_list_deleted {
   width: 100%;
   margin-top: 10px;
-  border: 1px solid black;
   border-radius: 20px;
 
   #list {

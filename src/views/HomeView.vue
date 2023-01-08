@@ -1,12 +1,13 @@
 <template>
   <div id="home">
-    <TheForm />
-    <div class="header">
+    <div id="header">
+      <TheTypography v-bind:content="getDay" tag="span" class="light" />
       <TheTypography content="Taskly" tag="h1" />
-      <TheTypography v-bind:content="getDay" tag="span" />
     </div>
-    <TheList />
-    <TheListFinished v-on:finish="finishedItems = $event" />
+    <div id="body">
+      <TheList />
+      <TheListFinished v-on:finish="finishedItems = $event" />
+    </div>
   </div>
 </template>
 
@@ -32,10 +33,30 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   text-align: center;
   margin: 0 auto;
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
+
+  #header {
+    width: 100%;
+    height: 20%;
+    background-color: $color-tertiary-dark;
+    color: $color-secondary-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $color-tertiary-light;
+  }
 }
 </style>

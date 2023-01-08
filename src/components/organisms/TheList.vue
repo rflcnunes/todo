@@ -62,10 +62,11 @@ export default {
 
 <style lang="scss" scoped>
 #the_list {
-  width: 100%;
+  width: 90%;
   margin-top: 10px;
-  border: 1px solid black;
   border-radius: 20px;
+  background-color: $color-primary-light;
+  padding: $spacing-xsmall;
 
   #list {
     display: flex;
@@ -76,21 +77,7 @@ export default {
 
     #item_row {
       width: 97%;
-
-      #item {
-        border-bottom: 1px solid $color-primary-dark;
-        width: 97%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        padding: 0 5px 0 5px;
-        justify-content: space-between;
-      }
-
-      #item:last-child {
-        border-bottom: none;
-      }
+      margin: 0 0 $spacing-xsmall 0;
     }
   }
 }

@@ -66,7 +66,6 @@ export default {
 #the_list_finished {
   width: 100%;
   margin-top: 10px;
-  border: 1px solid black;
   border-radius: 20px;
 
   #list {
@@ -77,7 +76,6 @@ export default {
     height: 100%;
 
     #item {
-      border-bottom: 1px solid $color-primary-dark;
       width: 97%;
       height: 50px;
       display: flex;

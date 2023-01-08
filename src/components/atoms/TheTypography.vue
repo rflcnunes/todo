@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag">
+  <component :is="tag" :class="{ light: light, dark: dark }">
     {{ content }}
   </component>
 </template>
@@ -33,5 +33,13 @@ h1 {
 span {
   color: $color-primary-dark;
   font-family: $font-family-subtitle;
+}
+
+.light {
+  color: $color-secondary-light;
+}
+
+.dark {
+  color: $color-secondary-dark;
 }
 </style>
